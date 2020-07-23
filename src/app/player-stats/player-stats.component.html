@@ -1,0 +1,65 @@
+<!-- Batsmen name | Runs| bowls | 4s | 6s | Wicket by | SR -->
+<h3>Team A batting Stats</h3>
+<div class="row">
+    <div class="col-sm-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Batsmen name</th>
+                    <th>Runs</th>
+                    <th>balls</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>Wicket by</th>
+                    <th>SR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let player of playersArray">
+                    <td>{{player.name}}</td>
+                    <td>{{player.btRuns}}</td>
+                    <td>{{player.btBalls}}</td>
+                    <td>{{player.bt4}}</td>
+                    <td>{{player.bt6}}</td>
+                    <td>{{player.wicketTaker}}</td>
+                    <td>{{(player.btRuns / player.btBalls) * 100  | number: '1.0-0'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <table class="table">
+            <thead>
+                <!-- Bowler name | Overs | Runs | Wickets | Econ | 0s | 4s | 6s | WD | NB -->
+                <tr>
+                    <th>Bowler name</th>
+                    <th>Overs</th>
+                    <th>Balls</th>
+                    <th>Runs</th>
+                    <th>Wickets</th>
+                    <th>Econ</th>
+                    <th>0s</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>WD</th>
+                    <th>NB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let player of playersArray">
+                    <td>{{player.name}}</td>
+                    <td>{{player.bwBalls/6 | number: '1.0-0'}}</td>
+                    <td>{{player.bwBalls}}</td>
+                    <td>{{player.bwRuns}}</td>
+                    <td>{{player.bwWickets}}</td>
+                    <td>{{player.bwEconomy}}</td>
+                    <td>{{player.bw0}}</td>
+                    <td>{{player.bw4}}</td>
+                    <td>{{player.bw6}}</td>
+                    <td>{{player.bwWide}}</td>
+                    <td>{{player.bwNobe}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

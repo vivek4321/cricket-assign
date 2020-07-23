@@ -1,0 +1,14 @@
+<p>Score card with all the details <br/>
+    Score card:<br/>
+    <span>Team A:<app-team-info [teamData] = 'match.bowlingTeam'></app-team-info></span>
+    Team A: 0/0(R.R), Overs 0.0<br/>
+    <span>Team B:<app-team-info  [teamData] = 'match.battingTeam'></app-team-info></span>
+    Team B: 0/0, target 0, Overs 0.0<br/>
+   {{wonGame}} won the game<br/>
+    Batsmen name | Runs| bowls | 4s | 6s | Wicket by | SR<br/>
+    {{match.bowlingTeam.name}}
+    <app-player-stats [playerData] = 'match.bowlingTeam.playersList'></app-player-stats>
+    {{match.battingTeam.name}}
+    <app-player-stats [playerData] = 'match.battingTeam.playersList'></app-player-stats>
+</p>
+
